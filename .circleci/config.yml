@@ -17,8 +17,8 @@ jobs:
             echo 'export DENO_INSTALL="$HOME/.deno"' >> $BASH_ENV
             echo 'export PATH="$DENO_INSTALL/bin:$PATH"' >> $BASH_ENV
       - run:
-          name: Deno type check
-          command: deno task check
+          name: Build
+          command: deno task build
 
 workflows:
   version: 2.1
