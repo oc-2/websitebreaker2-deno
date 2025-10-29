@@ -1,0 +1,27 @@
+# Git/Github files
+.git
+.gitignore
+.github
+.circleci
+
+# IDE files
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+.env
+.env.*.local
+
+# Build/test artifacts
+dist/
+build/
+coverage/
+test-results/
+
+# Cache files and directories
+*.log
+/tmp/
+*.local
+.cache/
+.deno/
+_fresh/
