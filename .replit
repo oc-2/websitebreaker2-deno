@@ -1,8 +1,0 @@
-modules = ["nodejs-20"]
-
-[nix]
-channel = "stable-25_05"
-packages = ["docker", "deno"]
-
-[[ports]]
-localPort = 8000
