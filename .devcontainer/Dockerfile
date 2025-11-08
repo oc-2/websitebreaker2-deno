@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/vscode/devcontainers/base:debian-10
+FROM mcr.microsoft.com/vscode/devcontainers/base:debian-12
 
 ENV DENO_INSTALL=/deno
 RUN mkdir -p /deno \
