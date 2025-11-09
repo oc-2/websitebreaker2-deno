@@ -25,3 +25,5 @@ test-results/
 .cache/
 .deno/
 _fresh/
+
+docker_push.sh
