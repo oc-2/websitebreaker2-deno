@@ -1,0 +1,17 @@
+# Runs in website-breaker repository on push and notifies the parent repo
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify-parent:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send repository_dispatch to parent repo
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: oc-2/website-breaker2                 # owner/repo of the parent
+          event-type: website-breaker-updated               # must match parent workflow's repository_dispatch type
+          client-payload: '{"commit":"${{ github.sha }}","ref":"${{ github.ref }}","pusher":"${{ github.actor }}"}'
